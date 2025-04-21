@@ -24,93 +24,36 @@ const DashboardCard = () => {
     <>
       <style>
         {`
-          @keyframes bounce {
+          @keyframes bounce-once {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-4px); }
           }
-
-          .hover-bounce:hover {
-            animation: bounce 0.4s ease;
-          }
-
-          .dashboard-card {
-            width: 90%;
-            max-width: 680px;
-            height: auto;
-            margin: 0 auto;
-            margin-top: 0.5rem;
-            padding: 2.5rem 1.5rem;
-            border-radius: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            background: radial-gradient(circle at center, #FFFFFF 0%, #B0D3E5 100%);
-            border: 1px solid #C6DCEB;
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-          }
-
-          .dashboard-card__item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #FFFFFF;
-            padding: 0.75rem 1.5rem;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            width: 100%;
-            transition: all 0.2s ease;
-          }
-
-          .dashboard-card__left {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex: 1;
-          }
-
-          .dashboard-card__icon {
-            background-color: #A9C9DB;
-            color: #FFFF;
-            padding: 0.625rem;
-            border-radius: 9999px;
-            font-size: 1.25rem;
-          }
-
-          .dashboard-card__title {
-            color: #333;
-            font-size: 1.125rem;
-            font-weight: 500;
-            white-space: nowrap;
-          }
-
-          .dashboard-card__value {
-            background: linear-gradient(to bottom, #A9C9DB, #BFE0F1);
-            color: #333;
-            font-weight: bold;
-            padding: 0.25rem 1rem;
-            border-radius: 9999px;
-            font-size: 1.125rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-            width: 90px;
-            text-align: center;
-            flex-shrink: 0;
+          .hover\\:animate-bounce-once:hover {
+            animation: bounce-once 0.4s ease;
           }
         `}
       </style>
 
-      <div className="dashboard-card">
+      <div className="lg:w-[60vw] md:w-[70vw] w-[95vw] mx-auto mt-2 lg:p-10 md:p-10 p-4 rounded-[30px] shadow-md bg-[radial-gradient(circle_at_center,_#FFFFFF_0%,_#B0D3E5_100%)] border border-[#C6DCEB] flex flex-col md:gap-5 gap-3">
         {cards.map((card, index) => (
-          <div key={index} className="dashboard-card__item hover-bounce">
-            <div className="dashboard-card__left">
-              <div className="dashboard-card__icon">{card.icon}</div>
-              <span className="dashboard-card__title">{card.title}</span>
+          <div
+            key={index}
+            className="flex justify-between items-center bg-white md:px-6 px-4 py-3 rounded-xl shadow-md w-full transition-all duration-200 ease-in-out hover:animate-bounce-once"
+          >
+            <div className="flex items-center md:gap-4 gap-2 flex-1">
+              <div className="bg-[#A9C9DB] text-white md:p-2.5 p-1.5 rounded-full text-base sm:text-sm md:text-xl lg:text-2xl">
+                {card.icon}
+              </div>
+              <span className="text-[#333] text-sm sm:text-base md:text-lg lg:text-xl font-medium whitespace-nowrap">
+                {card.title}
+              </span>
             </div>
-            <div className="dashboard-card__value">{card.value}</div>
+            <div className="bg-gradient-to-b from-[#A9C9DB] to-[#BFE0F1] text-[#333]  sm:text-base md:text-lg lg:text-xl font-bold md:px-4 px-2 py-1 rounded-full text-sm shadow-md md:w-[90px] w-auto text-center shrink-0">
+              {card.value}
+            </div>
           </div>
         ))}
       </div>
-
-      
     </>
   );
 };
