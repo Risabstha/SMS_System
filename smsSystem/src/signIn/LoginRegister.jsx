@@ -34,7 +34,7 @@ const LoginRegister = () => {
       <div className="lg:w-[50vw] md:w-[100vw] w-[100vw] flex items-center justify-center p-8 bg-[#B0D3E5]">
         <div className="form-box max-w-md p-8 rounded-4xl shadow-lg
                         bg-[#e4ebee] 
-                       lg:w-[30vw] lg:h-[24.5rem] w-[23rem] md:h-[24.5rem]]">
+                       lg:w-[30vw] lg:h-[26rem] w-[23rem] md:h-[26rem]]">
 
           <div>
             <img alt='nea logo' src={nea} className=" text-blue-700 mt-[3.4vh] mb-[6vh]" />

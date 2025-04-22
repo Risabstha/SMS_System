@@ -2,8 +2,8 @@ import React from "react";
 
 const ManageUserCard = ({ users }) => {
   return (
-    <div className=" flex justify-center pt-8 bg-gray-200">
-      <div className="w-full max-w-5xl">
+    <div className="min-h-screen flex justify-center pt-8 bg-white">
+      <div className="w-full mx-5">
         <div className="overflow-x-auto shadow-lg rounded-lg bg-white">
           <table className="w-full border border-gray-300">
             {/* Table Header */}

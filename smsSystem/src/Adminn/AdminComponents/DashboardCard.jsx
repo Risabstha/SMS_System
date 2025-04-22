@@ -34,7 +34,7 @@ const DashboardCard = () => {
         `}
       </style>
 
-      <div className="lg:w-[60vw] md:w-[70vw] w-[95vw] mx-auto mt-2 lg:p-10 md:p-10 p-4 rounded-[30px] shadow-md bg-[radial-gradient(circle_at_center,_#FFFFFF_0%,_#B0D3E5_100%)] border border-[#C6DCEB] flex flex-col md:gap-5 gap-3">
+      <div className="lg:w-[70vw] md:w-[70vw] w-[95vw] mx-auto mt-2 lg:p-10 md:p-10 p-4 rounded-[30px] shadow-md bg-[radial-gradient(circle_at_center,_#FFFFFF_0%,_#B0D3E5_100%)] border border-[#C6DCEB] flex flex-col md:gap-5 gap-3">
         {cards.map((card, index) => (
           <div
             key={index}

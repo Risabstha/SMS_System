@@ -87,7 +87,7 @@ const YesterdayDataTable = () => {
       </div>
 
       {/* Table */}
-      <div className="w-full max-w-6xl overflow-x-auto rounded shadow">
+      <div className="w-full overflow-x-auto rounded shadow">
         <table className="min-w-full table-auto border border-gray-300 bg-white">
           <thead className="bg-blue-500 text-white text-sm">
             <tr>

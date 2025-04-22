@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body, html {
-  background-color: rgb(229 231 235);
+  background-color: rgb(255, 255, 255);
   margin: 0;
   padding:0;
   height: 100%;

@@ -17,7 +17,7 @@ const AdminHeader = () => {
   const links = [
     { name: "Dashboard", to: "/dashboard" },
     { name: "Preview Data", to: "/preview-data" },
-    { name: "Yesterday", to: "/YesterdayDate" },
+    { name: "Yesterday Data", to: "/YesterdayDate" },
     { name: "SMS Report", to: "/sms-report" },
     { name: "Manage User", to: "/manage-users" },
   ];
