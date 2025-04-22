@@ -73,44 +73,49 @@ const SMSReportCard = () => {
         lineColor: [0, 0, 0],
       },
     });
- 
+
     doc.save("todays_sms_report.pdf");
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center bg-white p-6">
+    <div className="min-h-screen flex flex-col items-center bg-white px-6 pb-4">
       {/* Header + PDF Export Button */}
       <div className="w-full  flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold text-gray-700"></h2>
         <button
           onClick={exportToPDF}
-          className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition"
+          className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-600 transition"
         >
           Download Today's Report
         </button>
       </div>
 
       {/* Filter Section */}
-      <div className="flex justify-center mb-6">
-        <div className="flex gap-4 items-end">
+      <div className="mb-6">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 items-end">
           {/* Start Date */}
-          <div className="bg-blue-100 p-3 rounded-lg shadow-md">
-            <label className="font-semibold text-blue-800 block mb-1">Start Date</label>
-            <input type="date" className="p-1 border border-gray-300 rounded-md text-sm w-36" />
+          <div className="bg-blue-100 p-3 md:w-[12rem] w-[20rem] rounded-lg shadow-md">
+            <label className="font-semibold text-center text-blue-800 block mb-1">Start Date</label>
+            <div className="flex justify-center">
+              <input type="date" className="p-1 border border-gray-300 rounded-md text-sm w-36" />
+            </div>
           </div>
 
           {/* End Date */}
           <div className="bg-blue-100 p-3 rounded-lg shadow-md">
-            <label className="font-semibold text-blue-800 block mb-1">End Date</label>
-            <input type="date" className="p-1 border border-gray-300 rounded-md text-sm w-36" />
+            <label className="font-semibold text-center text-blue-800 block mb-1">End Date</label>
+            <div className="flex justify-center">
+              <input type="date" className="p-1 border border-gray-300 rounded-md text-sm w-36" />
+            </div>
           </div>
 
-          {/* Filter Button */}
-          <div className="pt-3">
-            <button className="bg-blue-600 text-white px-4 py-1.5 rounded-md text-sm hover:bg-blue-700 transition-all">
-              Filter
-            </button>
-          </div>
+
+        </div>
+        {/* Filter Button */}
+        <div className="pt-3 flex justify-center">
+          <button className="bg-blue-600 text-white px-4 py-1.5 rounded-md text-sm hover:bg-blue-700 transition-all">
+            Filter
+          </button>
         </div>
       </div>
 

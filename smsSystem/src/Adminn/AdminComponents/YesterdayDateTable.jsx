@@ -139,7 +139,7 @@ const YesterdayDataTable = () => {
 
       {/* Pagination */}
       {!showPreview && (
-        <div className="w-full max-w-6xl mt-4 flex justify-between items-center text-sm text-gray-700">
+        <div className="w-full max-w-6xl mt-6  flex justify-between items-center text-sm text-gray-700">
           <div>
             Showing {(currentPage - 1) * rowsPerPage + 1} to{" "}
             {Math.min(currentPage * rowsPerPage, data.length)} of {data.length} records
